@@ -58,3 +58,12 @@ input[type=button]:hover {
         font-size: 18px;
     }
 }
+
+@media only screen and (max-width: 425px) {
+    input[type=button] {
+        width: 100px;
+        margin-top: 55px;
+        margin-left: 126px;
+        font-size: 13px;
+    }
+}
