@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Say Me Jokes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="base">
+        <input type="button" onclick="window.location.reload()" value="Say a Joke" ></input>
+    </div>
+    
+    <div>
+        <h3 id="jk"></h3>
+    </div>
+    <script type = text/javascript src="script.js"></script>
+    <script>
+        const get_random = Math.floor(Math.random() * jokes.length)
+        const j = jokes[get_random]
+        document.getElementById('jk').innerHTML = j
+    </script>
+</body>
+</html>
