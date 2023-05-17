@@ -39,7 +39,7 @@ input[type=button]:hover {
     text-shadow: 5px 6px 5px #FFC000;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 320px) {
     body {
         background-image: url(img/3702808.jpg);
         background-repeat: no-repeat;
@@ -60,10 +60,22 @@ input[type=button]:hover {
 }
 
 @media only screen and (max-width: 425px) {
+    body {
+        background-image: url(img/3702808.jpg);
+        background-repeat: no-repeat;
+        background-size: 550px;
+    }
+
     input[type=button] {
         width: 100px;
         margin-top: 55px;
-        margin-left: 126px;
+        margin-left: 134px;
         font-size: 13px;
     }
+
+    #jk {
+        margin-top: 100px;
+        font-size: 18px;
+    }
 }
+
