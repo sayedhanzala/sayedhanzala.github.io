@@ -96,7 +96,6 @@ input[type=button]:hover {
     input[type=button] {
         width: 100px;
         margin-top: 55px;
-        /* margin-left: 134px; */
         font-size: 13px;
     }
 
