@@ -12,6 +12,33 @@ body {
     margin: 0;
 }
 
+.navbar {
+    background-color: transparent;
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .navbar li {
+    float: left;
+  }
+  
+  .navbar li a {
+    display: block;
+    padding: 16px;
+    text-decoration: none;
+    color: #080202;
+  }
+  
+
+.navbar {
+    background-color:transparent;
+}
+
 input[type=button] {
     width: 150px;
      /* margin-left: 539px; */
@@ -69,7 +96,7 @@ input[type=button]:hover {
     input[type=button] {
         width: 100px;
         margin-top: 55px;
-        margin-left: 134px;
+        /* margin-left: 134px; */
         font-size: 13px;
     }
 
