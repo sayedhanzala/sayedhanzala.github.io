@@ -60,4 +60,3 @@ let submitfield = document.getElementById('submitdata')
 submitfield.addEventListener('click', removeinput)
 
 
-
