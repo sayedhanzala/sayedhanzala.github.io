@@ -6,7 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>To-Do list</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  </head>
+  <body>
+
   <style>
     textarea.input100 {
       min-height: 169px;
@@ -71,10 +74,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <input type="button" class="nav-link" value="Home">
-            <input type="button" class="nav-link" onclick="showresult()" value="Show Data">
-            <input type="button" class="nav-link" onclick="clearall()" value="Clear All">
-            <input type="button" class="nav-link" onclick="removeitem()" value="Remove a Data">
+            <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+            <a class="nav-link" href="../to_do_list/index.html">To-Do List</a>
+            <a class="nav-link" href="../age_calculator/index.html">Age Calculator</a>
+            <a class="nav-link" href="https://textutils-react-beta.vercel.app">TextUtils</a>
           </div>
         </div>
       </div>
@@ -84,25 +87,26 @@
     <h1>Welcome to my Web-app To-Do list.</h1>
     <p>This store's the data in Local Storage in browser.</p>
     <p>No need to do anything just use this UI</p>
-    <p id="scrshor">Some other functions are also available in navigation-menu</p>
+  </div>
+  <div class="" align="center">
+    <input type="button" class="btn btn-dark mx-15" onclick="showresult()" value="Show Data">
+    <input type="button" class="btn btn-dark mx-15" onclick="clearall()" value="Clear All">
+    <input type="button" class="btn btn-dark mx-15" onclick="removeitem()" value="Remove a Data">
   </div>
   <div align="center">
     <form action="" id="frm">
-      <textarea type="text" class="input100" placeholder="Enter Here Something..." id="todo" rows="4" cols="50"></textarea>
+      <textarea type="text" class="input100" placeholder="Enter Here Something..." id="todo" rows="4"
+        cols="50"></textarea>
       <br>
       <br>
-      <button onclick="storevalue()" class="btn btn-primary" id="submitdata">Submit</button>
+      <button onclick="storevalue()" class="btn btn-dark" id="submitdata">Submit</button>
     </form>
   </div>
   <br>
   <div>
-    <!-- <button onclick="showresult()">Your stored data</button> -->
     <p id="result" align="center"></p>
   </div>
   <br>
-  <!-- <div>
-        <button onclick="clearall()">Clear data</button>
-    </div> -->
   <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"

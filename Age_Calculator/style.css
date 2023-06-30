@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    /* overflow: hidden; */
 }
 
 body {
@@ -15,18 +14,18 @@ body {
     margin: 0;
 }
 
+
 .container1 {
     display: flex;
     justify-content: center;
-    width: 520px;
-    height: auto;
+    width: 320px;
     min-height: 100px;
     margin: 100px auto;
     border-radius: 5px;
 }
 
 .container1 h1 {
-    font-size: 26px;
+    font-size: 20px;
     text-align: center;
     font-family: sans-serif;
     font-weight: normal;
@@ -36,9 +35,9 @@ body {
     color: orange;
 }
 
-.box {
+.box1 {
     float: left;
-    margin: 0px 120px;
+    margin: 0px 90px;
 }
 
 .title1 {
@@ -54,7 +53,7 @@ body {
     color: #FF7518;
 }
 
-.base {
+.base1 {
     float: left;
     margin: 0px 560px;
 }
@@ -132,10 +131,9 @@ input[type=button]:hover {
         color: #bababa;
     }
 
-    .box {
+    .box1 {
         width: 99%;
         margin-left: 80px;
-        /* margin-right: auto; */
         margin-bottom: 40px;
     }
 
@@ -154,10 +152,9 @@ input[type=button]:hover {
 
     input[type=text] {
         width: 200px;
-        /* margin: 0; */
     }
 
-    .base {
+    .base1 {
         display: flex;
         justify-content: center;
         float: none;
