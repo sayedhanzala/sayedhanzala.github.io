@@ -1310,11 +1310,16 @@ audio {
     }
 
 
-#lst_greet {
-	animation: cssAnimation 0s 40s forwards;
-	opacity: 0; 
-	}
-	
-	@keyframes cssAnimation {
-	to   { opacity: 1; }
-	}
+#lst_greet {display: none;}
+
+.lst-greet{
+	margin-top: 340px;
+	font-family: 'Signika', sans-serif;
+	font-size: 30px;
+	text-transform: uppercase;
+	color: #C4515C;
+	text-shadow: 2px 2px 2px #FFF;
+	display: none;
+	font-weight: bold;
+	text-align: center;
+}

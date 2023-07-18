@@ -180,6 +180,9 @@ $('document').ready(function(){
 				$("p:nth-child(49)").fadeOut('slow').promise().done(function () {
 					$('.cake').fadeIn('fast');
 				});
+				$(function() {
+					$("#lst_greet").delay(1000).fadeIn();
+				  });
 				
 			}
 			else{
