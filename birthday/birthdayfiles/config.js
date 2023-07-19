@@ -23,7 +23,6 @@ var config = {
         light_candle: "Candle?",
         wish_message: "Happy Birthday",
         story: "A MESSAGE FOR YOU",
-        // lst_greet:"Happy Birthday! Aaliya (Aalu🥔)",
-        lst_greet:"Happy Birthday! Hanzala",
+        lst_greet:"Happy Birthday! Aaliya (Aalu🥔)",
     }
 };

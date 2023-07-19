@@ -1332,9 +1332,10 @@ audio {
 
 	.r-msg{
 		font-size: 20px;
+		bottom: 10%;
 	}
 
-	.cake-cover{
+	.cake{
 		margin-bottom: 20px;
 	}
 }
