@@ -1324,3 +1324,18 @@ audio {
 	font-weight: bold;
 	text-align: center;
 }
+
+@media screen and (max-width: 480px) {
+	.r-bulb{
+		margin-right: 15px;
+	}
+
+	.r-msg{
+		font-size: 20px;
+	}
+
+	.cake-cover{
+		margin-bottom: 20px;
+	}
+}
+
