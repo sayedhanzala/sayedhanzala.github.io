@@ -1264,7 +1264,6 @@ audio {
 #play, #bannar_coming, #balloons_flying,#cake_fadein,#light_candle,#wish_message,#story {
 	display: none;
 }
-
 .cake-cover {
 	margin-top: 0px;
 }
