@@ -1,53 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-body{
-    background: linear-gradient(45deg,#0a0a0a,#3a4452);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 197px;
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #5c4186;
 }
-.calculator{
-    border: 1px solid #717377;
-    padding: 20px;
-    border-radius: 16px;
-    background: transparent;
-    box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.6);
-
+.container {
+  position: relative;
+  max-width: 300px;
+  width: 100%;
+  border-radius: 12px;
+  padding: 10px 20px 20px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
 }
-input{
-    width: 320px;
-    border: none;
-    padding: 20px;
-    margin: 10px;
-    background: transparent;
-    box-shadow: 0px 3px 15px rgba(84, 84, 84, 0.1);
-    font-size: 40px;
-    text-align: right;
-    cursor: pointer;
+.display {
+  height: 80px;
+  width: 100%;
+  outline: none;
+  border: none;
+  text-align: right;
+  margin-bottom: 10px;
+  font-size: 25px;
+  color: #5c4186;
+  pointer-events: none;
 }
-input::placeholder{
-    color: #ffff;
+.buttons {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
 }
-button{
-    width: 60px;
-    height: 60px;
-    margin: 10px;
-    background: transparent;
-    color: #ffff;
-    font-size: 20px;
-    cursor: pointer;
+.buttons button {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #eee;
 }
-.equalbtn{
-    background-color: #fb7c14;
+.buttons button:active {
+  transform: scale(0.99);
 }
-.hover:hover{
-    color: #fb7c14;
+.operator {
+  color: #5c4186;
+}
+.buttons .equalsto{
+    display: grid;
 }
