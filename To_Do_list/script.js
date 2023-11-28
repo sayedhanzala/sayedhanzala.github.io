@@ -14,7 +14,7 @@ const storevalue = () => {
 
 
 const clearall = () => {
-    let perm = prompt('Are you sure you want to clear all the data? y/n')
+    let perm = prompt('Are you sure you want to clear all the data? y/n (Note: This will delete all the saved passwords also)')
     if (perm == 'yes' || perm == 'y') {
         localStorage.clear()
     }

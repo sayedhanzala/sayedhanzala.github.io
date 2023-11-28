@@ -30,6 +30,7 @@ function generatePassword() {
   localStorage.setItem("inputdata", JSON.stringify(data));
 }
 
+
 const showresult = () => {
   const storedData = localStorage.getItem("inputdata");
 
@@ -44,3 +45,11 @@ const showresult = () => {
 };
 
 shwHistory.addEventListener("click", showresult);
+
+const copyFunc = () => {
+  let copyText = document.getElementById("generatePassword");
+  navigator.clipboard.writeText(copyText);
+  console.log(copyText.value);
+};
+
+document.getElementById("cpy-passwd").addEventListener("click", copyFunc);
