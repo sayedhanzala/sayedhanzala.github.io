@@ -5,13 +5,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculator in HTML CSS & JavaScript</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
     <div class="container">
-        <input type="text" class="display" />
+        <input type="text" class="display" readonly/>
 
         <div class="buttons">
             <button class="operator" data-value="AC">AC</button>
@@ -34,11 +34,11 @@
             <button data-value="3">3</button>
             <!-- <button class="operator equalsto" data-value="=">=</button> -->
 
-            <button class="equalsto" data-value="=">=</button>
-            <button data-value=".">.</button>
-            <button data-value="0">0</button>
             <button class="operator" data-value="%">%</button>
-            <button class="operator" data-value="AC">AC</button>
+            <button data-value="00">00</button>
+            <button data-value="0">0</button>
+            <button data-value=".">.</button>
+            <button class="equalsto operator" data-value="=">=</button>
         </div>
     </div>
 
