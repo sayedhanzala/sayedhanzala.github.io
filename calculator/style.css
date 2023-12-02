@@ -7,13 +7,15 @@
   font-family: "Poppins", sans-serif;
 }
 body {
+  background: #5c4186 !important;
+}
+.bdystart {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #5c4186;
 }
-.container {
+.mycontainer {
   position: relative;
   max-width: 300px;
   width: 100%;
@@ -22,7 +24,7 @@ body {
   background: #fff;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
 }
-.display {
+.mydisplay {
   height: 80px;
   width: 100%;
   outline: none;
@@ -33,12 +35,12 @@ body {
   color: #5c4186;
   pointer-events: none;
 }
-.buttons {
+.mybuttons {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(4, 1fr);
 }
-.buttons button {
+.mybuttons button {
   padding: 10px;
   border-radius: 6px;
   border: none;
@@ -46,12 +48,12 @@ body {
   cursor: pointer;
   background-color: #eee;
 }
-.buttons button:active {
+.mybuttons button:active {
   transform: scale(0.99);
 }
 .operator {
   color: #5c4186;
 }
-.buttons .equalsto{
-    display: grid;
+.mybuttons .equalsto {
+  display: grid;
 }

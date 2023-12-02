@@ -1,4 +1,4 @@
-const display = document.querySelector(".display");
+const display = document.querySelector(".mydisplay");
 const buttons = document.querySelectorAll("button");
 const specialChars = ["%", "*", "/", "-", "+", "="];
 let output = "";
