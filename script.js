@@ -1,66 +1,68 @@
-let submitfield = document.getElementById('submitdata')
+let submitfield = document.getElementById("submitdata");
 let showdata = document.getElementById("showdata");
 let clear = document.getElementById("clear");
 let removeone = document.getElementById("removeitem");
-
+const outputElement = document.getElementById("result");
 
 const storevalue = () => {
-    const userInput = document.getElementById('todo').value
+  const userInput = document.getElementById("todo").value;
 
-    let data = localStorage.getItem('inputdata')
+  let data = localStorage.getItem("inputdata");
 
-    data = data ? JSON.parse(data) : []
+  data = data ? JSON.parse(data) : [];
 
-    data.push(userInput)
+  data.push(userInput);
 
-    localStorage.setItem('inputdata', JSON.stringify(data))
+  localStorage.setItem("inputdata", JSON.stringify(data));
 
-    alert('Data saved successfully')
-}
-
+  alert("Data saved successfully");
+};
 
 const clearall = () => {
-    let perm = prompt('Are you sure you want to clear all the data? y/n (Note: This will also delete all the saved passwords.)')
-    if (perm == 'yes' || perm == 'y') {
-        localStorage.clear()
-    }
-}
+  let perm = prompt("Are you sure you want to clear all the data? y/n");
+  if (perm == "yes" || perm == "y") {
+    localStorage.removeItem("inputdata");
+  }
+};
 
 const showresult = () => {
-    const storedData = localStorage.getItem('inputdata')
+  const storedData = localStorage.getItem("inputdata");
 
-    const data = storedData ? JSON.parse(storedData) : []
+  const data = storedData ? JSON.parse(storedData) : [];
 
-    let textOutput = '';
+  if (data.length == 0) {
+    outputElement.innerHTML =
+      "No data Found, Write some data & store it to saved.";
+  } else {
+    let textOutput = "";
     data.forEach((input, index) => {
-        textOutput += `${index + 0}: ${input}\n`
+      textOutput += `${index + 0}: ${input}\n`;
     });
 
-    const outputElement = document.getElementById('result')
     outputElement.innerText = textOutput;
-}
-
+  }
+};
 
 const removeitem = () => {
-    let rem = parseInt(prompt('Which Data you want to remove, Enter the index value'))
+  let rem = parseInt(
+    prompt("Which Data you want to remove, Enter the index value")
+  );
 
-    const storedData = localStorage.getItem('inputdata')
+  const storedData = localStorage.getItem("inputdata");
 
-    let data = storedData ? JSON.parse(storedData) : []
+  let data = storedData ? JSON.parse(storedData) : [];
 
-    const indexToDelete = rem
+  const indexToDelete = rem;
 
-    data.splice(indexToDelete, 1)
+  data.splice(indexToDelete, 1);
 
-    localStorage.setItem('inputdata', JSON.stringify(data))
-
-}
+  localStorage.setItem("inputdata", JSON.stringify(data));
+};
 
 const removeinput = () => {
-    let inputfield = document.getElementById('todo')
-    inputfield.value = ''
-}
-
+  let inputfield = document.getElementById("todo");
+  inputfield.value = "";
+};
 
 submitfield.addEventListener("click", storevalue);
 showdata.addEventListener("click", showresult);

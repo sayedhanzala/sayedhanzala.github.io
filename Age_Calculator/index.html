@@ -40,7 +40,10 @@
     <form class="form1">
         <div class="box1">
             <div class="title1">Date</div>
-            <input type="text" name="date" id="date" placeholder="dd" required>
+            <!-- <input type="text" name="date" id="date" placeholder="dd" required> -->
+            <select name="date" id="">
+                <option value="01">01</option>
+            </select>
         </div>
         <div class="box1">
             <div class="title1">Month</div>
@@ -53,7 +56,7 @@
     </form>
 
     <div class="base1">
-        <input type="button" name="submit" value="Submit" onclick="age()" />
+        <input type="button" name="submit" value="Submit" id="btn-res" />
     </div>
 
     <div id="age"></div>
