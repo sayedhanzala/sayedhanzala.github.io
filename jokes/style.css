@@ -1,10 +1,7 @@
 body {
     background-image: url(../img/89114.jpg);
     background-repeat: no-repeat;
-    background-size: 1280px;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: -200px;
+    background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     line-height: 1.5;

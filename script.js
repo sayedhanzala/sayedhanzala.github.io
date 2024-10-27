@@ -3,6 +3,25 @@ let showdata = document.getElementById("showdata");
 let clear = document.getElementById("clear");
 let removeone = document.getElementById("removeitem");
 const outputElement = document.getElementById("result");
+let navbar = document.getElementById("navbar");
+
+
+// rendering navbar
+
+fetch("./layout/header.html")
+  .then(response => response.text())
+  .then(data => {
+    navbar.innerHTML = data;
+
+    // Add event listener for the menu toggle after loading the navbar
+    const menuToggle = document.getElementById("menuToggle");
+    if (menuToggle) {
+      menuToggle.addEventListener("click", function () {
+        const navLinks = document.getElementById("navbarNavAltMarkup");
+        navLinks.classList.toggle('show');
+      });
+    }
+  });
 
 const storevalue = () => {
   const userInput = document.getElementById("todo").value;
