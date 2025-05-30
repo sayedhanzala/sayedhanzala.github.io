@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C2PA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+        body{
+            overflow: hidden;
+        }
+        .body-container {
+            background: linear-gradient(135deg, #e0e7ff 0%, #f0fdfa 100%);
+            min-height: 90vh;
+            margin: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            background: #fff;
+            padding: 2.5rem 2rem 2rem 2rem;
+            border-radius: 18px;
+            box-shadow: 0 6px 32px rgba(0, 0, 0, 0.10), 0 1.5px 4px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            min-width: 320px;
+            max-width: 90vw;
+        }
+
+        h2 {
+            font-weight: 700;
+            color: #3b3b3b;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.5px;
+        }
+
+        #imageInput {
+            display: none;
+        }
+
+        .custom-file-label {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            background: linear-gradient(90deg, #6366f1 0%, #06b6d4 100%);
+            color: #fff;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-bottom: 1rem;
+        }
+
+        .custom-file-label:hover {
+            background: linear-gradient(90deg, #4f46e5 0%, #0891b2 100%);
+        }
+
+        .info {
+            color: #64748b;
+            font-size: 0.98rem;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar"></div>
+    <div class="body-container">
+        <div class="container">
+            <h2>Content Credentials Removal</h2>
+            <label for="imageInput" class="custom-file-label">Choose Image</label>
+            <input type="file" id="imageInput" accept="image/*">
+            <div class="info">Select an image to remove all metadata. The cleaned image will be downloaded
+                automatically.
+            </div>
+        </div>
+    </div>
+    <script>
+        // Load the shared navbar
+        fetch("../layout/header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+            });
+        document.getElementById('imageInput').addEventListener('change', function (event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const img = new Image();
+                img.onload = function () {
+                    const canvas = document.createElement('canvas');
+                    canvas.width = img.width;
+                    canvas.height = img.height;
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(img, 0, 0);
+                    canvas.toBlob(function (blob) {
+                        const url = URL.createObjectURL(blob);
+                        const a = document.createElement('a');
+                        a.href = url;
+                        a.download = 'result.png';
+                        document.body.appendChild(a);
+                        a.click();
+                        document.body.removeChild(a);
+                        URL.revokeObjectURL(url);
+                    }, 'image/png');
+                };
+                img.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
